@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>关于-micro-kid</title>
+    <meta name="author" content="micro-kid" />
+    <meta name="description" content="micro-kid" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/public/img/favicon.ico" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <link rel="stylesheet" href="/public/css/font_1178380_6gqjvet0dwj/iconfont.css" />
+    <script src="/public/js/hm.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            {% include "components/header.html" %}
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        关于
+                    </h2>
+                    <div class="post-info">
+                        <time class="post-time">
+                            · 2019-05-08 ·
+                        </time>
+                    </div>
+                    <div class="post-content">
+                        <div class="user-card">
+                            <img class="user-img" src="/public/img/avatar.jpeg">
+                            <div class="username">micro-kid</div>
+                            <div class="description">Front End Developer | Nodejs Developer</div>
+                        </div>
+                        <div style="text-align: center; color: #495057;">Every 🐦 has an 🦅's dream.</div>
+                    </div>
+                </article>
+            </div>
+            
+            {% include "components/gitalk.html" %}
+            {% include "components/footer.html" %}
+        </div>
+    </div>
+    
+</body>
+
+</html>

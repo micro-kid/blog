@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.microkid.cn</id>
+    <title>micro-kid</title>
+    <updated>{{helper.nowTime()}}</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.microkid.cn"/>
+    <link rel="self" href="/atom.xml"/>
+    <subtitle>Stay hungry,Stay foolish.</subtitle>
+    <logo>/public/img/avatar.jpeg</logo>
+    <icon>/public/img/favicon.ico</icon>
+    <rights>All rights reserved 2019, micro-kid</rights>
+    {% for item in list %}
+    <entry>
+        <title type="html"><![CDATA[{{item.title}}]]></title>
+        <id>{{item.id}}</id>
+        <link href="/detail/{{item.id}}"></link>
+        <updated>{{helper.localTimeFull(item.publishAt)}}</updated>
+        <content type="html">
+        <![CDATA[{{item.content}}]]>
+        </content>
+    </entry>
+    {% endfor %}
+</feed>

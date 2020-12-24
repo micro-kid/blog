@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# egg
 
-You can use the [editor on GitHub](https://github.com/micro-kid/blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## QuickStart
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<!-- add docs here for user -->
 
-```markdown
-Syntax highlighted code block
+see [egg docs][egg] for more detail.
 
-# Header 1
-## Header 2
-### Header 3
+### Development
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+$ npm i
+$ npm run dev
+$ open http://localhost:7001/
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Deploy
 
-### Jekyll Themes
+```bash
+$ npm start
+$ npm stop
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/micro-kid/blog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### npm scripts
 
-### Support or Contact
+- Use `npm run lint` to check code style.
+- Use `npm test` to run unit test.
+- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+[egg]: https://eggjs.org

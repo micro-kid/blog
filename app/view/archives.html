@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>归档-micro-kid</title>
+    <meta name="author" content="micro-kid" />
+    <meta name="description" content="micro-kid" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/public/img/favicon.ico" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <link rel="stylesheet" href="/public/css/font_1178380_6gqjvet0dwj/iconfont.css" />
+    <script src="/public/js/hm.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            {% include "components/header.html" %}
+            <div class="archives-container">
+                {% for year,list in years %}
+                <h2 class="year">{{year}}</h2>
+                {% for item in list %}
+                <article class="post">
+                    <a href="/detail/{{item.id}}">
+                        <h2 class="post-title">
+                            {{item.title}}
+                            <small>{{helper.localTime(item.publishAt)}}</small>
+                        </h2>
+                    </a>
+                </article>
+                {% endfor %}
+                {% endfor %}
+            </div>
+            {% include "components/footer.html" %}
+        </div>
+    </div>
+</body>
+
+</html>

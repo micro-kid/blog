@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>micro-kid</title>
+    <meta name="author" content="micro-kid" />
+    <meta name="description" content="micro-kid" />
+    <meta name="baidu-site-verification" content="Fq6EuxJZUD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/public/img/favicon.ico" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <link rel="stylesheet" href="/public/css/font_1178380_6gqjvet0dwj/iconfont.css" />
+    <script src="/public/js/hm.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            {% include "components/header.html" %}
+
+            <div class="post-container">
+                {% for item in list %}
+                <article class="post">
+                    <a href="/detail/{{item.id}}">
+                        <h2 class="post-title">{{item.title}}</h2>
+                    </a>
+                    <div class="post-info">
+                        <time class="post-time">
+                            · {{helper.localTime(item.publishAt)}} ·
+                        </time>
+                        {% if item.tags %}
+                        {% for tag in item.tags.split(',') %}
+                        <a href="/tag/{{tag}}" class="post-tag">
+                            # {{tag}}
+                        </a>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                    {% if item.smallThumb %}
+                    <a href="/detail/{{item.id}}" class="post-feature-image"
+                        style="background-image: url({{item.smallThumb}})">
+                    </a>
+                    {% endif %}
+                    <!-- <div class="post-abstract"></div> -->
+                </article>
+                {% endfor %}
+            </div>
+
+            <div class="pagination-container">
+                {% if page>1 %}
+                <a href="/p{{page*1-1}}/" class="prev-page">上一页</a>
+                {% endif %}
+                {% if total>page*size %}
+                <a href="/p{{page*1+1}}/" class="next-page">下一页</a>
+                {% endif %}
+            </div>
+            
+            {% include "components/footer.html" %}
+        </div>
+    </div>
+</body>
+
+</html>
