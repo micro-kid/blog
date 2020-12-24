@@ -45,8 +45,8 @@ module.exports = appInfo => {
       port: '3306',
       // 用户名
       user: 'root',
-      // 密码
-      password: 'cwhz1AH.com',
+      // 密码 自行修改
+      password: '123456',
       // 数据库名
       database: 'egg'
     },
